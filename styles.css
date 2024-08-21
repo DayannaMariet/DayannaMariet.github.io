@@ -1,0 +1,256 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Estilos del Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f7;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #10357a; /* Color predeterminado para todos los enlaces */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Color al pasar el ratón por encima */
+}
+
+
+.language select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #0A57A0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login button:hover {
+    background-color: #FFC107;
+}
+
+/* Estilos de la sección Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('mundo.png'); /* Asegúrate de tener esta imagen en tu carpeta */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 87, 160, 0.8);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.hero .cta-button {
+    padding: 15px 30px;
+    background-color: #FFD700;
+    color: #0A57A0;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero .cta-button:hover {
+    background-color: #FFC107;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #0A57A0;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+/* Sección ¿Cómo Funciona? */
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('mundo.png'); /* Asegúrate de tener esta imagen en tu carpeta */
+    background-size: cover;
+    background-position: center;
+    color: #1a1070;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.how-it-works h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.how-it-works p {
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección Hero de Tarifas */
+.pricing-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('mundo.png'); /* Asegúrate de tener esta imagen en tu carpeta */
+    background-size: cover;
+    background-position: center;
+    color: #1246b6;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.pricing-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.pricing-hero p {
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tabla de Tarifas */
+.pricing-table {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.pricing-table h2 {
+    text-align: center;
+    color: #0A57A0;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-table th {
+    background-color: #0A57A0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pricing-table td {
+    font-size: 18px;
+    text-align: center;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
